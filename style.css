@@ -1,0 +1,332 @@
+
+
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(51, 51, 51, 0.8); /* Makes the bar semi-transparent */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.bar:hover {
+    background-color: rgba(51, 51, 51, 0.5); /* Lightens the transparency on hover */
+}
+#cover{
+
+text-align: center;
+margin-bottom: 30px;
+    
+}
+#pic{
+   
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    border: 30px solid #4808be;
+    border-radius: 500px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.now{
+   background-color:#d8e8d8;
+    padding: 13px;
+    text-align: center;
+    width: 50%;
+    margin-left: 24%;
+}
+#imgtry{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #a417d7;
+    object-fit: cover;
+    margin-top: 30px;
+}
+#sc{
+    color: #dd00ff;
+    text-align: center;
+
+}
+
+#bback, #toping {
+    width: 48%; /* Makes each element take up about half the container's width */
+    margin-bottom: 20px; /* Adds space between rows */
+}
+#bback {
+    
+    height: 300px;
+   margin-left: 25%;
+    text-align: center;
+    
+}
+.bodi{
+    background: linear-gradient(45deg, #c919a3, #0000ff);
+    background-size: cover; /* Ensures the background covers the entire element */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#toping {
+    background-color :#4808be;
+    border: 5px solid #1478dc;
+}
+#ji{
+
+color: rgb(28, 152, 69);
+text-align: center;
+
+
+
+
+}
+.bod{
+    background-image: url('back.jpeg');
+    background-size: cover; /* Adjusts the image size to cover the element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+
+
+}
+#downloadLink{
+
+
+
+    color: rgb(32, 133, 220);
+}
+#piece{
+
+
+width: 20%;
+
+
+
+}
+
+
+.toping {
+    width: 55%;
+    background-color: wheat;
+    margin-left: 21%;
+    padding: 20px;
+    border: 5px solid #1478dc;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into multiple rows */
+    justify-content: space-between; /* Ensures space between items */
+    align-items: flex-start;
+}
+
+#imgtry {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #a417d7;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+#sc {
+    color: #dd00ff;
+    text-align: center;
+}
+
+.destext {
+    color: rgb(197, 52, 125);
+    margin: 20px;
+}
+
+#piece {
+    color: black;
+    text-align: left;
+    margin: 20px;
+}
+
+.bodie {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: linear-gradient(45deg, #c919a3, #0000ff);
+}
+
+#menu {
+    text-align: center;
+    background-color: blueviolet;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#myVideo{
+width: 500px;
+height: 500px;
+border-radius: 50px;
+border: 5px solid #a417d7;
+
+
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    text-align: center;
+    background-color: blueviolet;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#content-container {
+    display: flex;
+    align-items: flex-start; /* Align items from the top */
+    justify-content: space-between; /* Add space between the video and the text */
+    margin: 20px;
+}
+
+#myVideo {
+    width: 50%; /* Set the width of the video to 50% of the container */
+    border-radius: 10px;
+    border: 5px solid #fff;
+}
+
+#text-container {
+    width: 45%; /* Set the width of the text container */
+    padding-left: 20px; /* Add some space between the video and the text */
+}
+
+p {
+    line-height: 1.6; /* Adjust the line height for better readability */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffaa00;
+}
+#textcoloring{
+
+color: white;
+
+
+
+}
+.bodiey{
+
+    background: linear-gradient(45deg, #c919a3, #0000ff);
+    background-size: cover; /* Ensures the background covers the entire element */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+
+
+
+
+
+}#polyimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 5px solid transparent; /* Set the border width */
+    border-image: linear-gradient(45deg, #2882d6, #ec2ad2) 1;
+    transition: transform 0.3s ease;
+}
+
+#polyimg:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.image-container:hover .hover-text {
+    opacity: 1;
+}
+#uoy {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 5px solid rebeccapurple;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#uoy:hover {
+    transform: rotate(-5deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Ensure this matches the width of the image */
+    height: 200px; /* Ensure this matches the height of the image */
+}
+.polyimg {
+    width: 10%;
+    height: 10%;
+    border-radius: 10px;
+    border: 5px solid transparent; /* Set the border width */
+    border-image: linear-gradient(45deg, #2882d6, #ec2ad2) 1;
+    transition: transform 0.3s ease;
+}
+
+.polyimg:hover {
+    transform:scale(5deg) ;
+}
+.bodiey1{
+
+    background: linear-gradient(45deg, #c919a3, #0000ff);
+    background-size: cover; /* Ensures the background covers the entire element */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+
+
+
+
+
+}
+#real{
+
+
+    border: 30px solid rgb(247, 17, 94);
+
+
+}
+#real1{
+
+    border: 30px solid rgb(247, 17, 94);
+
+
+}
+#real2{
+    border: 30px solid rgb(247, 17, 94);
+
+    
+}

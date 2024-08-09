@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>cv home</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <script>
+        document.getElementById('downloadLink').addEventListener('click', function (e) {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.href = 'Professional CV.pdf';
+            link.download = 'Professional CV.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</head>
+<body class = "bod">
+    <div id="cover" >
+    <img src="picprofile.jpg" id="pic">
+    
+    <div class ="now">
+    <p id ="ji">I am Khaled Walid a college student <br>who is majoring in Computer science software engineering 
+       <br> Age 21
+        <br>University : British University in Egypt
+        <br>I graduated from Cornell school with GPA 101.
+         </p>
+         <p >
+            <a href="Professional CV.pdf" id="downloadLink">Professional CV Khaled Walid</a></p>
+    </div>
+    
+        
+        
+</div>
+<br>
+    <nav id ="menu">
+        <a href ="home.html" class ="bar">Home Page</a>
+<a href ="smart.html" class ="bar">smart cone pencil case </a>
+<a href ="unity2d.html" class ="bar">unity top down shoter</a> 
+    <a href ="poly.html" class ="bar">polygraph machine emmbeded device</a> 
+        <a href ="aitictactoe.html" class ="bar">ai player tic tac toe</a> 
+            <a href ="javaandsoftware.html" class ="bar">java and software jframe</a> 
+    </nav>
+
+    </body>
+    </html>

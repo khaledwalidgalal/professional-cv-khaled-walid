@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cv home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodie">
+    <nav id="menu">
+        <a href="home.html" class="bar">Home Page</a>
+        <a href="smart.html" class="bar">smart cone pencil case </a>
+        <a href="unity2d.html" class="bar">unity top down shooter</a> 
+        <a href="poly.html" class="bar">polygraph machine embedded device</a>
+        <a href="aitictactoe.html" class="bar">ai player tic tac toe</a>
+        <a href="javaandsoftware.html" class="bar">java and software jframe</a>
+    </nav>
+
+    <div id="content-container">
+        
+        <video id="myVideo" autoplay muted controls>
+            <source src="unity topdown view 2d sooter game/gamevid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            
+        </video>
+        
+            
+        
+        <div id="text-container">
+            <p id ="textcoloring">
+                Detailed Story: <br>
+                Jimmy’s journey in the magical candy world can be a fun and engaging game <br>
+                that educates players about the dangers of sugar addiction. <br>
+                The game can be designed as a 2D platformer with a variety of levels, <br>
+                each with its own unique challenges and puzzles. <br> The game can be divided into several stages, <br>
+                each representing a different aspect of Jimmy’s journey. <br>
+                The game is designed with colorful graphics <br>and catchy music to make it more engaging for the players. <br>
+                It also includes educational messages about the dangers of sugar addiction <br>and the benefits of a healthy diet.
+                Overall, the game can be a fun and interactive way to educate players <br>about the importance of a healthy lifestyle <br>
+                and the dangers of sugar addiction.
+            </p>
+            <button id="controls" onclick="toggleMute()">Toggle Mute/Unmute</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMute() {
+            var video = document.getElementById("myVideo");
+            video.muted = !video.muted;
+        }
+    </script>
+</body>
+</html>
