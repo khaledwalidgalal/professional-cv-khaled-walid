@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodiey">
+    <nav id="menu">
+        <a href="index.html" class="bar">Home Page</a>
+        <a href="smart.html" class="bar">Smart Cone Pencil Case</a>
+        <a href="unity2d.html" class="bar">Unity Top Down Shooter</a> 
+        <a href="poly.html" class="bar">Polygraph Machine Embedded Device</a>
+        <a href="aitictactoe.html" class="bar">AI Player Tic Tac Toe</a>
+        <a href="javaandsoftware.html" class="bar">Java and Software JFrame</a>
+        <a href ="cib.html" class ="bar">CIB summer program ,competition video ,and certificate</a> 
+    </nav>
+    <div class="content-container">
+        <div>
+            <img id="sas" src="cib/sasc.png" alt="SAS">
+            <img id="linkedin" src="cib/linkc.png" alt="LinkedIn">
+        </div>
+        <p id="colornow">
+            Completion email
+            <br><br>
+            Congratulations on your participation in CIB Summer Program 2024. 
+            <br><br>
+            We are glad to have had you on board this journey and we hope that this year’s content was of great benefit to you.
+            <br>
+            Please find attached below your certificate for passing the second week, LinkedIn, and CIB. You have now obtained your first and second certificates.
+            <br><br>
+            Don’t forget to share this wonderful milestone with your friends, family, and your LinkedIn network.
+            <br><br>
+            Wishing you the best of luck on your future endeavors,
+            <br>
+            CIB L&D Team
+            <br><br>
+            Khaled's experience
+            <br>
+            I have been proud to be a part of the CIB Summer Program. We learned about the importance of data literacy and other subjects like the importance of a CV and risk management and how to start your own business.
+            <br><br>
+            This was an engaging journey with lots of competitions. Although this program wasn't related to my profession, it was a fun experience.
+        </p>
+    </div>
+   <div>
+<p>one of the videos i constructed for the competition </p>
+
+<video id="controls1" autoplay muted >
+    <source src="cib/cibcompvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    
+</video>
+
+</div>
+<div id="spacenow">
+    <button class="button4" onclick="toggleMute()">Toggle Mute/Unmute</button>
+    <button id="playPauseButton" onclick="hi()">Play</button>
+</div>
+<script>
+    function toggleMute() {
+        var video = document.getElementById("controls1");
+        video.muted = !video.muted;
+    }
+
+    function hi() {
+        const video = document.getElementById('controls1');
+        const button = document.getElementById('playPauseButton');
+
+        if (video.paused) {
+            video.play();
+            button.textContent = 'Pause';
+        } else {
+            video.pause();
+            button.textContent = 'Play';
+        }
+    }
+</script>
+</body>
+</html>
