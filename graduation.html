@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaled's Graduation Project Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>/* General Body and Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header & Title */
+header {
+    background: #34495e;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 5px 0 0;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+main {
+    padding-top: 30px;
+}
+
+section {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h3, h4 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h4 {
+    border-bottom: 1px solid #bdc3c7;
+    margin-top: 25px;
+    font-size: 1.2em;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-item {
+    background: #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.caption {
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    background: #fcfcfc;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal/Lightbox Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for the page header */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1em;
+    }
+}</style>
+</head>
+<body>
+      <nav id="menu" class="navbar">
+        <a href="index.html" class="bar">Home</a>
+        <a href="smart.html" class="bar">Smart Pencil Case</a>
+        <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+        <a href="poly.html" class="bar">Polygraph Device</a>
+        <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+        <a href="cib.html" class="bar">CIB Summer Program</a>
+        <a href="graduation.html" class="bar">Graduation Project</a>
+        
+        
+    </nav>
+    <br>
+    <header>
+        <div class="container">
+            <h2>My Graduation Project Portfolio</h2>
+            <h2>Uncover Your True Self: A System for Discovering Personalities and Recommending Videos</h2>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="project-summary">
+            <h3>Project Summary</h3>
+            <p>This project is a web application designed to help users discover their personality, receive personalized video recommendations, and book consultations with professionals. The system is built with a robust backend, a user-friendly interface, and incorporates AI face recognition for authentication. Below is a detailed breakdown of the project's features and technology stack.</p>
+            <div class="image-gallery summary-gallery">
+                <div class="image-item">
+                    <img src="6.png" alt="Project Abstract and System Design">
+                    <div class="caption">Project Abstract and High-Level System Design.</div>
+                </div>
+                <div class="image-item">
+                    <img src="17.png" alt="Project Technologies and Functionalities">
+                    <div class="caption">Project Functionalities and Technology Stack.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="user-features">
+            <h3>User-Facing Features</h3>
+            <p>The user-facing side of the application is designed to be intuitive and engaging, guiding users through the personality discovery process.</p>
+
+            <h4>User Authentication</h4>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="1.png" alt="Login Page with Face Recognition">
+                    <div class="caption">The login page supports both email/password and AI face recognition.</div>
+                </div>
+                <div class="image-item">
+                    <img src="4.png" alt="Sign Up Page with Face Recognition">
+                    <div class="caption">The sign-up page for new users, including face recognition setup.</div>
+                </div>
+            </div>
+
+            <h4>Personality Test & Results</h4>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="7.png" alt="Personality Test Questions">
+                    <div class="caption">A sample of the personality test questions inspired by Helen Fisher.</div>
+                </div>
+                <div class="image-item">
+                    <img src="8.jpg" alt="Personality Test Results">
+                    <div class="caption">The results page showing the personality type and a percentage breakdown.</div>
+                </div>
+            </div>
+
+            <h4>Bookings & AI Chatbot</h4>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="10.png" alt="Bookings List">
+                    <div class="caption">The bookings page, where users can create new consultations.</div>
+                </div>
+                <div class="image-item">
+                    <img src="11.png" alt="Book a Call">
+                    <div class="caption">Booking form for scheduling a call with a professional.</div>
+                </div>
+                <div class="image-item">
+                    <img src="9.png" alt="AI Chatbot Interface">
+                    <div class="caption">The AI Chatbot interface for answering personality-related queries.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="admin-panel">
+            <h3>Admin Panel Features</h3>
+            <p>The administrative panel allows for full management of the application, ensuring data integrity and content control.</p>
+
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="13.png" alt="Admin Dashboard">
+                    <div class="caption">Welcome to the Admin Dashboard.</div>
+                </div>
+                <div class="image-item">
+                    <img src="15.png" alt="Manage Users">
+                    <div class="caption">Manage Users: An admin can view, delete, or promote users.</div>
+                </div>
+                <div class="image-item">
+                    <img src="14.png" alt="Manage Bookings">
+                    <div class="caption">Manage Bookings: The admin can oversee all scheduled consultations.</div>
+                </div>
+                <div class="image-item">
+                    <img src="16.png" alt="Manage Recommended Videos">
+                    <div class="caption">Manage Recommended Videos: The admin can add, edit, or delete videos for each personality type.</div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+<script>
+
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var images = document.querySelectorAll(".image-gallery img");
+
+images.forEach(img => {
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.parentElement.querySelector(".caption").innerHTML;
+    }
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Also close the modal when clicking outside the image
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
