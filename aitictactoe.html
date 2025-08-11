@@ -1,23 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CV Home</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>CV Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Optional: Add some basic styling for the video to fit similar to the image */
+        .toggle-video {
+            max-width: 100%; /* Ensure video scales down if larger than container */
+            height: auto;    /* Maintain aspect ratio */
+            display: block;  /* Remove extra space below video */
+            border-radius: 8px; /* Match image's border-radius if any */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Match image's shadow if any */
+            cursor: pointer; /* Indicate it's clickable */
+        }
+    </style>
 </head>
 <body class="bodiey1">
-    <nav id="menu">
-        <a href="index.html" class="bar">Home Page</a>
-        <a href="smart.html" class="bar">Smart Cone Pencil Case</a>
-        <a href="unity2d.html" class="bar">Unity Top Down Shooter</a> 
-        <a href="poly.html" class="bar">Polygraph Machine Embedded Device</a>
-        <a href="aitictactoe.html" class="bar">AI Player Tic Tac Toe</a>
-        <a href="javaandsoftware.html" class="bar">Java and Software JFrame</a>
-        <a href ="cib.html" class ="bar">CIB summer program ,competition video ,and certificate</a> 
-    </nav>
-    <img id="real1"src="inroduction to ai/tictac toe ai player.png" alt="">  
-<img id ="real" src="inroduction to ai/tictactoe intro.png" alt="">
+       <nav id="menu">
+    <a href="index.html" class="bar">Home</a>
+    <a href="smart.html" class="bar">Smart Pencil Case</a>
+    <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+    <a href="poly.html" class="bar">Polygraph Device</a>
+    <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+    <a href="cib.html" class="bar">CIB Summer Program</a>
+ <a href="graduation.html" class="bar">Graduation Project</a>
+  </nav>
 
-<img id="real2"src="inroduction to ai/tic tac toe ai.png" alt="">
+ <div class="download-buttons">
+  <a href="ai_project.docx" download class="download-btn">Download Document</a>
+  <a href="ai_project.pptx" download class="download-btn">Download PowerPoint</a>
+</div>
+
+<div class="center-toggle-wrapper">
+  <div id="toggle-container" onclick="toggleTicTacToe()">
+    <video id="ticVideo" class="toggle-video" autoplay loop muted playsinline style="display: block;">
+        <source src="0707.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="ticDescription" class="toggle-description" style="display: none;">
+      <h3>What is Tic Tac Toe?</h3>
+      <p>
+        Tic Tac Toe is a strategic 2-player game played on a 3×3 grid. Players take turns marking X or O in empty squares.
+        The first to align 3 of their marks horizontally, vertically, or diagonally wins. This version uses AI to play against you.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleTicTacToe() {
+    const video = document.getElementById('ticVideo');
+    const desc = document.getElementById('ticDescription');
+
+    const videoVisible = video.style.display !== 'none';
+
+    video.style.display = videoVisible ? 'none' : 'block';
+    desc.style.display = videoVisible ? 'block' : 'none';
+
+    // If the video is now visible, ensure it plays. If not, pause it.
+    if (video.style.display === 'block') {
+        video.play();
+    } else {
+        video.pause();
+    }
+  }
+</script>
+
 </body>
 </html>
