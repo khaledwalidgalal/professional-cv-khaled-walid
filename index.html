@@ -1,49 +1,399 @@
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const downloadLink = document.getElementById('downloadLink');
+      if (downloadLink) {
+        downloadLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          const link = document.createElement('a');
+          link.href = 'Professional CV.pdf';
+          link.download = 'Professional CV.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
+    });
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
-    <title>cv home</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
-    <script>
-        document.getElementById('downloadLink').addEventListener('click', function (e) {
-            e.preventDefault();
-            const link = document.createElement('a');
-            link.href = 'Professional CV.pdf';
-            link.download = 'Professional CV.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khaled walid home Page</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f5f5f5; /* Light background as in the image */
+            color: #333; /* Default text color */
+            overflow-x: hidden;
+            display: grid; /* Use grid for overall layout */
+            grid-template-columns: repeat(12, 1fr); /* 12 columns for flexibility */
+            grid-template-rows: auto 1fr; /* Top for navbar, rest for content */
+            min-height: 100vh;
+            position: relative; /* For absolute positioning of images */
+        }
+
+        .navbar {
+            grid-column: 1 / -1; /* Span all columns */
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            align-items: center;
+            padding: 20px 50px;
+            background-color: transparent;
+            position: absolute; /* Keep it absolute to float over images */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        #menu .bar {
+            color: #333; /* Darker text for navbar */
+            text-decoration: none;
+            margin-left: 25px; /* Space between nav items */
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #menu .bar:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-section {
+            grid-column: 1 / -1; /* Span all columns */
+            grid-row: 2 / 3; /* Take the second row */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            box-sizing: border-box;
+            z-index: 50; /* Ensure content is above background images */
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin-top: -50px; /* Adjust as needed to pull content up */
+        }
+
+        .hero-content .title {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hero-content .title .highlight {
+            color: #007bff; /* Blue color for "Best Creators" */
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .buttons-container .button {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 15px;
+        }
+
+        .buttons-container .button.primary {
+            background-color: #007bff; /* Blue button */
+            color: #fff;
+        }
+
+        .buttons-container .button.primary:hover {
+            background-color: #0056b3;
+        }
+
+        .buttons-container .button.secondary {
+            background-color: transparent;
+            color: #666;
+            border: 1px solid #ccc;
+        }
+
+        .buttons-container .button.secondary:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Surrounding Images Positioning */
+        .surrounding-image {
+            position: absolute;
+            border-radius: 8px; /* Rounded corners for all images */
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            z-index: 1; /* Behind content */
+        }
+
+        .image-1 { /* Top left, small grey */
+            top: 5%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            opacity: 0.7;
+        }
+
+        .image-2 { /* Left, below image 1, green/blue */
+            top: 25%;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            transform: rotate(-5deg);
+        }
+
+        .image-3 { /* Left, below image 2, stacked blocks */
+            top: 55%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+        }
+
+        .image-4 { /* Left, bottom, food */
+            bottom: 5%;
+            left: 5%;
+            width: 200px;
+            height: 150px;
+        }
+
+        .image-5 { /* Left, bottom, book */
+            bottom: 5%;
+            left: 20%; /* Adjusted to be slightly right of image 4 */
+            width: 150px;
+            height: 120px;
+            transform: rotate(5deg);
+        }
+
+        .image-6 { /* Top right, pink/purple landscape */
+            top: 5%;
+            right: 5%;
+            width: 200px;
+            height: 180px;
+        }
+
+        .image-7 { /* Right, below image 6, love more */
+            top: 25%;
+            right: 5%;
+            width: 100px;
+            height: 100px;
+            transform: rotate(10deg);
+        }
+
+        .image-8 { /* Right, below image 7, abstract colored cube */
+            top: 40%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .image-9 { /* Right, middle, squiggly abstract */
+            top: 60%;
+            right: 5%;
+            width: 180px;
+            height: 180px;
+            transform: rotate(-10deg);
+        }
+
+        .image-10 { /* Right, bottom, city landscape */
+            bottom: 5%;
+            right: 5%;
+            width: 220px;
+            height: 180px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .hero-content .title {
+                font-size: 50px;
+            }
+            .image-1 { width: 70px; height: 70px; }
+            .image-2 { width: 130px; height: 130px; }
+            .image-3 { width: 100px; height: 100px; }
+            .image-4 { width: 180px; height: 130px; }
+            .image-5 { width: 130px; height: 100px; }
+            .image-6 { width: 180px; height: 160px; }
+            .image-7 { width: 90px; height: 90px; }
+            .image-8 { width: 130px; height: 130px; }
+            .image-9 { width: 160px; height: 160px; }
+            .image-10 { width: 200px; height: 160px; }
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 15px 30px;
+            }
+            #menu .bar {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+            .hero-content .title {
+                font-size: 40px;
+            }
+            .hero-content p {
+                font-size: 16px;
+            }
+            .buttons-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .buttons-container .button {
+                width: 80%; /* Make buttons wider on smaller screens */
+                margin: 0 auto;
+                padding: 10px 20px;
+            }
+
+            /* Hide some images for smaller screens */
+            .image-1, .image-3, .image-5, .image-7, .image-9 {
+                display: none;
+            }
+            .image-2 { top: 15%; left: 3%; width: 100px; height: 100px; }
+            .image-4 { bottom: 10%; left: 3%; width: 150px; height: 100px; }
+            .image-6 { top: 15%; right: 3%; width: 150px; height: 120px; }
+            .image-8 { top: 50%; right: 3%; width: 120px; height: 120px; }
+            .image-10 { bottom: 10%; right: 3%; width: 180px; height: 140px; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content .title {
+                font-size: 32px;
+            }
+            .hero-content p {
+                font-size: 14px;
+            }
+            .image-2, .image-4, .image-6, .image-8, .image-10 {
+                transform: none !important; /* Remove rotations on mobile */
+                box-shadow: none; /* Remove shadows for cleaner look */
+            }
+            .image-2 { top: 10%; left: 2%; width: 80px; height: 80px; }
+            .image-4 { bottom: 5%; left: 2%; width: 100px; height: 80px; }
+            .image-6 { top: 10%; right: 2%; width: 100px; height: 80px; }
+            .image-8 { top: 40%; right: 2%; width: 90px; height: 90px; }
+            .image-10 { bottom: 5%; right: 2%; width: 120px; height: 90px; }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 10px 15px;
+                justify-content: center; /* Center nav items for very small screens */
+            }
+            #menu .bar {
+                margin: 0 8px;
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+            .hero-content .title {
+                font-size: 24px;
+            }
+            .hero-content p {
+                font-size: 13px;
+            }
+            .buttons-container .button {
+                width: 90%;
+            }
+            /* Hide almost all surrounding images on very small screens */
+            .surrounding-image:not(.image-2):not(.image-6) {
+                display: none;
+            }
+            .image-2 { top: 5%; left: 1%; width: 60px; height: 60px; }
+            .image-6 { top: 5%; right: 1%; width: 70px; height: 60px; }
+        }
+        nav#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #24004d;
+  padding: 15px;
+}
+
+nav#menu .bar {
+  color: white;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+nav#menu .bar:hover {
+  background-color: #5c2d91;
+}
+
+    </style>
 </head>
-<body class = "bod">
-    <div id="cover" >
-    <img src="picprofile.jpg" id="pic">
-    
-    <div class ="now">
-    <p id ="ji">I am Khaled Walid a college student <br>who is majoring in Computer science software engineering 
-       <br> Age 21
-        <br>University : British University in Egypt
-        <br>I graduated from Cornell school with GPA 101.
-         </p>
-         <p >
-            <a href="Professional CV.pdf" id="downloadLink">Professional CV Khaled Walid</a></p>
-    </div>
-    
+<body class="bod">
+
+  <nav id="menu" class="navbar">
+        <a href="index.html" class="bar">Home</a>
+        <a href="smart.html" class="bar">Smart Pencil Case</a>
+        <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+        <a href="poly.html" class="bar">Polygraph Device</a>
+        <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+        <a href="cib.html" class="bar">CIB Summer Program</a>
+        <a href="graduation.html" class="bar">Graduation Project</a>
         
         
-</div>
-<br>
-    <nav id ="menu">
-        <a href ="index.html" class ="bar">Home Page</a>
-<a href ="smart.html" class ="bar">smart cone pencil case </a>
-<a href ="unity2d.html" class ="bar">unity top down shoter</a> 
-    <a href ="poly.html" class ="bar">polygraph machine emmbeded device</a> 
-        <a href ="aitictactoe.html" class ="bar">ai player tic tac toe</a> 
-            <a href ="javaandsoftware.html" class ="bar">java and software jframe</a> 
-            <a href ="cib.html" class ="bar">CIB summer program ,competition video ,and certificate</a> 
     </nav>
 
-    </body>
-    </html>
+    <section class="hero-section">
+        <div class="hero-content">
+              <section class="hero-section">
+        <img src="picprofile.jpg" alt="khaled walid" class="main-hero-image">
+
+        <div class="hero-content">
+            <p class="greeting">HELLO!</p>
+            <h1 class="name">I Am Khaled Walid</h1>
+            <b>
+                <p>Computer Science - Software Engineering student</p>
+                <p>Age: 21</p>
+                <p>University: British University in Egypt</p>
+                <p>High School: Graduated from Cornell School with GPA 101</p>
+            </b>
+           
+        </div>
+
+        <div class="hero-image">
+            
+        </div>
+    </section>
+            <div class="buttons-container">
+                 <a href="Professional CV.pdf" id="downloadLink" class="button">Download My CV</a>
+            </div>
+        </div>
+    </section>
+
+            <img src="Untitled design (5).png" class="surrounding-image image-7">
+            <img src="Untitled design (4).png" class="surrounding-image image-8">
+            <img src="Untitled design (3).png" class="surrounding-image image-2">
+            <img src="Untitled design (5).png" class="surrounding-image image-3">
+            <img src="Untitled design (4).png" class="surrounding-image image-4">
+            <img src="Untitled design (3).png" class="surrounding-image image-10">
+
+   
+
+</body>
+</html>
