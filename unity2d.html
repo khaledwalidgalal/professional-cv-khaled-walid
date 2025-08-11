@@ -1,53 +1,242 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>cv home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Khaled Walid | Unity Game Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-image: url("back.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+nav#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #24004d;
+  padding: 15px;
+}
+
+nav#menu .bar {
+  color: white;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+nav#menu .bar:hover {
+  background-color: #5c2d91;
+}
+
+#content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;
+  background-color: rgba(189, 37, 209, 0.9);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-over-text {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+#video-container {
+  position: relative;
+  width: 100%;
+}
+
+#myVideo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.5);
+}
+
+#overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 30px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Title and paragraph styles */
+#overlay-text h2 {
+  font-size: 32px;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+#overlay-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+/* Button group (mute) */
+#button-group {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+#controls {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#controls:hover {
+  background-color: #ffaa00;
+}
+
+/* Show/Hide text buttons */
+#toggleTextBtn,
+#showTextBtn {
+  position: absolute;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 3;
+}
+
+#toggleTextBtn {
+  bottom: 15px;
+  right: 15px;
+}
+
+#showTextBtn {
+  top: 15px;
+  left: 15px;
+  display: none; /* hidden by default */
+}
+
+#toggleTextBtn:hover,
+#showTextBtn:hover {
+  background-color: #ffaa00;
+}
+
+/* Hide all content in overlay when hidden (except toggle buttons) */
+#overlay-text.hidden > *:not(#toggleTextBtn):not(#showTextBtn) {
+  display: none;
+}
+
+#overlay-text.hidden {
+  display: flex; /* keep layout to show button */
+}
+</style>
 </head>
 <body class="bodie">
-    <nav id="menu">
-        <a href="index.html" class="bar">Home Page</a>
-        <a href="smart.html" class="bar">smart cone pencil case </a>
-        <a href="unity2d.html" class="bar">unity top down shooter</a> 
-        <a href="poly.html" class="bar">polygraph machine embedded device</a>
-        <a href="aitictactoe.html" class="bar">ai player tic tac toe</a>
-        <a href="javaandsoftware.html" class="bar">java and software jframe</a>
-        <a href ="cib.html" class ="bar">CIB summer program ,competition video ,and certificate</a> 
-    </nav>
 
-    <div id="content-container">
-        
-        <video id="myVideo" autoplay muted controls>
-            <source src="unity topdown view 2d sooter game/gamevid.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            
-        </video>
-        
-            
-        
-        <div id="text-container">
-            <p id ="textcoloring">
-                Detailed Story: <br>
-                Jimmy’s journey in the magical candy world can be a fun and engaging game <br>
-                that educates players about the dangers of sugar addiction. <br>
-                The game can be designed as a 2D platformer with a variety of levels, <br>
-                each with its own unique challenges and puzzles. <br> The game can be divided into several stages, <br>
-                each representing a different aspect of Jimmy’s journey. <br>
-                The game is designed with colorful graphics <br>and catchy music to make it more engaging for the players. <br>
-                It also includes educational messages about the dangers of sugar addiction <br>and the benefits of a healthy diet.
-                Overall, the game can be a fun and interactive way to educate players <br>about the importance of a healthy lifestyle <br>
-                and the dangers of sugar addiction.
-            </p>
-            <button id="controls" onclick="toggleMute()">Toggle Mute/Unmute</button>
-        </div>
+  <!-- Navigation -->
+  <nav id="menu">
+    <a href="index.html" class="bar">Home</a>
+    <a href="smart.html" class="bar">Smart Pencil Case</a>
+    <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+    <a href="poly.html" class="bar">Polygraph Device</a>
+    <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+    <a href="cib.html" class="bar">CIB Summer Program</a>
+     <a href="graduation.html" class="bar">Graduation Project</a>
+  </nav>
+
+  <!-- Video and Overlay Text -->
+<div id="content-container">
+  <!-- First Video Block -->
+  <div class="video-over-text">
+    <div id="video-container">
+      <video id="myVideo" autoplay muted loop playsinline>
+        <source src="unity topdown view 2d sooter game/gamevid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div id="button-group">
+        <button id="controls" onclick="toggleMute()">🔇 Mute/Unmute</button>
+      </div>
+
+      <div id="overlay-text">
+        <button id="showTextBtn" onclick="toggleText()">👁️ Show Text</button>
+        <h2>Jimmy’s Journey – Unity Game</h2>
+        <p>Jimmy’s journey in the magical candy world is a colorful 2D platformer...</p>
+        <p>Every stage of the game reflects a different step...</p>
+        <p>This game is a perfect example of how entertainment...</p>
+        <button id="toggleTextBtn" onclick="toggleText()">👁️ Hide Text</button>
+      </div>
     </div>
+  </div>
 
-    <script>
-        function toggleMute() {
-            var video = document.getElementById("myVideo");
-            video.muted = !video.muted;
-        }
-    </script>
+ 
+</div>
+
+
+  <!-- JavaScript -->
+<script>
+  function toggleMute() {
+    const video = document.getElementById("myVideo");
+    video.muted = !video.muted;
+  }
+
+  function toggleMuteGameplay() {
+    const video = document.getElementById("gameplayVideo");
+    video.muted = !video.muted;
+  }
+
+  function toggleText() {
+    const overlayText = document.getElementById("overlay-text");
+    const showBtn = document.getElementById("showTextBtn");
+    const hideBtn = document.getElementById("toggleTextBtn");
+
+    const isHidden = overlayText.classList.toggle("hidden");
+    showBtn.style.display = isHidden ? "block" : "none";
+    hideBtn.style.display = isHidden ? "none" : "block";
+  }
+</script>
+
 </body>
 </html>
+
+
