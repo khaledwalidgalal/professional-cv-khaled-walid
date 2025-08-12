@@ -1,45 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CV Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Khaled Walid | Polygraph Machine Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: white;
+    }
+
+    /* Navigation */
+    #menu {
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+    }
+    #menu .bar {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    #menu .bar:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Content container */
+    .content-container1 {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+
+    .image-section {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .polyimg {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    #colornow {
+      flex: 2 1 400px;
+    }
+    #colornow h2 {
+      margin-top: 0;
+    }
+
+    /* Toggle image section */
+    .toggle-image-wrapper {
+      max-width: 1000px;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .image-container:hover img {
+      transform: scale(1.02);
+    }
+    .hover-text {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .image-container:hover .hover-text {
+      opacity: 1;
+    }
+  </style>
 </head>
-<body class="bodiey">
-    <nav id="menu">
-        <a href="index.html" class="bar">Home Page</a>
-        <a href="smart.html" class="bar">Smart Cone Pencil Case</a>
-        <a href="unity2d.html" class="bar">Unity Top Down Shooter</a> 
-        <a href="poly.html" class="bar">Polygraph Machine Embedded Device</a>
-        <a href="aitictactoe.html" class="bar">AI Player Tic Tac Toe</a>
-        <a href="javaandsoftware.html" class="bar">Java and Software JFrame</a>
-        <a href ="cib.html" class ="bar">CIB summer program ,competition video ,and certificate</a> 
-    </nav>
+<body>
 
-    <div class="content-container">
-        <div class="image-section">
-            <img src="polygraph/schema.jpg" alt="Polygraph Machine" class="polyimg">
-        </div>
-        <div class="text-section">
-            <h2>Polygraph Machine</h2>
-            <p class="description">
-                <strong>Description:</strong><br>
-                A circuit that measures your heartbeat whenever it rises or falls and, dependently, specific light bulb flashes on for feedback, triggering a buzzer, and the OLED Display shows the heartbeat rates.
-            </p>
-            <p class="how-to-use">
-                <strong>How to Use?</strong><br>
-                You place your finger on the pulse rate sensor and let it measure your heartbeat rate. The OLED then displays the BPM (Beats per Minute) and depending on the conditions, the BPM reaches a level higher than 100, the buzzer is then triggered, the red LED turns on, and the White LED proceeds to blink at a speed dependent on the BPM levels.
-            </p>
-        </div>
+  <!-- Navigation -->
+  <nav id="menu">
+    <a href="index.html" class="bar">Home</a>
+    <a href="smart.html" class="bar">Smart Pencil Case</a>
+    <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+    <a href="poly.html" class="bar">Polygraph Device</a>
+    <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+    <a href="cib.html" class="bar">CIB Summer Program</a>
+    <a href="graduation.html" class="bar">Graduation Project</a>
+  </nav>
+
+  <!-- Project Section -->
+  <div class="content-container1">
+    <div class="image-section">
+      <img src="polygraph/schema.jpg" alt="Polygraph Machine Schema" class="polyimg">
     </div>
 
-    <div class="schema-section">
-        <div class="image-container">
-            <a href="polygraph/polygraph machine inside.jpg" target="_blank">
-                <img src="polygraph/polygraph machine.jpg" alt="" id="polyimg">
-            </a>
-            <div class="hover-text">This is the polygraph machine click to see inside</div>
-        </div>
+    <div id="colornow">
+      <h2>Polygraph Machine</h2>
+      <p><strong>Description:</strong> A polygraph machine built as a smart circuit that monitors heartbeat fluctuations. It activates visual and auditory indicators when changes occur.</p>
+      <p>
+        The OLED display shows real-time BPM (Beats per Minute), and based on the values:
+      </p>
+      <ul>
+        <li>If BPM > 100: buzzer sounds</li>
+        <li>Red LED lights up</li>
+        <li>White LED flashes at a frequency based on BPM</li>
+      </ul>
+      <p><strong>Usage:</strong> The user places a finger on the pulse sensor. The readings are processed, and feedback is provided visually and audibly depending on the BPM.</p>
     </div>
+  </div>
+
+  <!-- Toggle Image -->
+  <div class="toggle-image-wrapper">
+    <div class="image-container">
+      <img id="polyimg" src="polygraph/polygraph machine.jpg" alt="Polygraph Machine">
+      <div class="hover-text">Click to switch view</div>
+    </div>
+  </div>
+
+  <script>
+    const image = document.getElementById("polyimg");
+    const image1 = "polygraph/polygraph machine.jpg";
+    const image2 = "polygraph/polygraph machine inside.jpg";
+    let showingImage1 = true;
+
+    image.addEventListener("click", () => {
+      image.src = showingImage1 ? image2 : image1;
+      showingImage1 = !showingImage1;
+    });
+  </script>
+
 </body>
 </html>
