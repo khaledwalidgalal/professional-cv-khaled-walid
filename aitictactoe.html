@@ -1,70 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CV Home</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Optional: Add some basic styling for the video to fit similar to the image */
-        .toggle-video {
-            max-width: 100%; /* Ensure video scales down if larger than container */
-            height: auto;    /* Maintain aspect ratio */
-            display: block;  /* Remove extra space below video */
-            border-radius: 8px; /* Match image's border-radius if any */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Match image's shadow if any */
-            cursor: pointer; /* Indicate it's clickable */
-        }
-    </style>
-</head>
-<body class="bodiey1">
-       <nav id="menu">
-    <a href="index.html" class="bar">Home</a>
-    <a href="smart.html" class="bar">Smart Pencil Case</a>
-    <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
-    <a href="poly.html" class="bar">Polygraph Device</a>
-    <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
-    <a href="cib.html" class="bar">CIB Summer Program</a>
- <a href="graduation.html" class="bar">Graduation Project</a>
-  </nav>
+<meta charset="UTF-8">
+<title>CV Home</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to right, #1f1c2c, #928dab);
+        color: white;
+    }
 
- <div class="download-buttons">
-  <a href="ai_project.docx" download class="download-btn">Download Document</a>
-  <a href="ai_project.pptx" download class="download-btn">Download PowerPoint</a>
+    /* Navigation */
+    #menu {
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        padding: 12px 0;
+    }
+    #menu .bar {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: background 0.3s;
+    }
+    #menu .bar:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Download buttons */
+    .download-buttons {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .download-btn {
+        background: #4CAF50;
+        color: white;
+        padding: 10px 18px;
+        margin: 0 8px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
+    .download-btn:hover {
+        background: #45a049;
+    }
+
+    /* Centered toggle section */
+    .center-toggle-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    #toggle-container {
+        max-width: 700px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Video styling */
+    .toggle-video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+        transition: transform 0.3s ease;
+    }
+    .toggle-video:hover {
+        transform: scale(1.02);
+    }
+
+    /* Description box styling */
+    .toggle-description {
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        margin-top: 15px;
+        text-align: left;
+        animation: fadeIn 0.4s ease;
+    }
+
+    /* Hide when needed */
+    .hidden {
+        display: none !important;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+</head>
+<body>
+
+<nav id="menu">
+    <a href="index.html" class="bar">Home</a>
+    <a href="smart.html" class="bar">Smart Pencil Case</a>
+    <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+    <a href="poly.html" class="bar">Polygraph Device</a>
+    <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+    <a href="cib.html" class="bar">CIB Summer Program</a>
+    <a href="graduation.html" class="bar">Graduation Project</a>
+</nav>
+
+<div class="download-buttons">
+    <a href="ai_project.docx" download class="download-btn">Download Document</a>
+    <a href="ai_project.pptx" download class="download-btn">Download PowerPoint</a>
 </div>
 
 <div class="center-toggle-wrapper">
-  <div id="toggle-container" onclick="toggleTicTacToe()">
-    <video id="ticVideo" class="toggle-video" autoplay loop muted playsinline style="display: block;">
-        <source src="0707.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div id="ticDescription" class="toggle-description" style="display: none;">
-      <h3>What is Tic Tac Toe?</h3>
-      <p>
-        Tic Tac Toe is a strategic 2-player game played on a 3×3 grid. Players take turns marking X or O in empty squares.
-        The first to align 3 of their marks horizontally, vertically, or diagonally wins. This version uses AI to play against you.
-      </p>
-    </div>
-  </div>
+    <div id="toggle-container">
+        <!-- Video -->
+        <video id="ticVideo" class="toggle-video" autoplay loop muted playsinline>
+            <source src="0707.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Button -->
+        <button id="toggleButton" class="download-btn" style="margin-top: 15px;">
+            Show Description
+        </button>
+
+        <!-- Description (hidden by default) -->
+        <div id="ticDescription" class="toggle-description hidden">
+            <h3>What is Tic Tac Toe?</h3>
+            <p>
+                Tic Tac Toe is a strategic 2-player game played on a 3×3 grid.
+                Players take turns marking X or O in empty squares.
+                The first to align 3 of their marks horizontally, vertically, or diagonally wins.
+                This version uses AI to play against you.
+            </p>
+        </div>
+    </div>
 </div>
 
 <script>
-  function toggleTicTacToe() {
-    const video = document.getElementById('ticVideo');
-    const desc = document.getElementById('ticDescription');
+document.getElementById('toggleButton').addEventListener('click', function () {
+    const video = document.getElementById('ticVideo');
+    const desc = document.getElementById('ticDescription');
 
-    const videoVisible = video.style.display !== 'none';
+    const showingVideo = !video.classList.contains('hidden');
 
-    video.style.display = videoVisible ? 'none' : 'block';
-    desc.style.display = videoVisible ? 'block' : 'none';
+    video.classList.toggle('hidden', showingVideo);
+    desc.classList.toggle('hidden', !showingVideo);
 
-    // If the video is now visible, ensure it plays. If not, pause it.
-    if (video.style.display === 'block') {
+    // Update button text
+    this.textContent = showingVideo ? 'Show Video' : 'Show Description';
+
+    if (!showingVideo) {
         video.play();
     } else {
         video.pause();
     }
-  }
+});
 </script>
 
 </body>
